@@ -25,5 +25,18 @@ namespace UniversityClinicHospital
             Salary = salary;
             HasBeenPaid = hasBeenPaid;
         }
+
+        public void PrintEmployeeList()
+        {
+            Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid})");
+        }
+
+        public void PayEmployees()
+        {
+            foreach (Employee employee in listOfEmployees)
+            {
+                HasBeenPaid = true;
+            }
+        }
     }
 }
