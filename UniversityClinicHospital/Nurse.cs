@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicHospital
 {
-    class Nurse
+    public class Nurse : Employee
     {
     }
 }
