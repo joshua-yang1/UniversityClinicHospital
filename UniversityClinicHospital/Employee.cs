@@ -7,16 +7,17 @@ namespace UniversityClinicHospital
     public class Employee
     {
         public List<Employee> listOfEmployees = new List<Employee>();
+        
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
         public int Salary { get; set; }
         public bool HasBeenPaid { get; set; }
         public Employee()
         {
-            Name = "Bob Ross";
+            /*Name = "Bob Ross";
             EmployeeNumber = 123;
             Salary = 90000;
-            HasBeenPaid = false;
+            HasBeenPaid = false;*/
         }
         public Employee(string name, int employeeNumber, int salary, bool hasBeenPaid)
         {
@@ -28,7 +29,7 @@ namespace UniversityClinicHospital
 
         public void PrintEmployeeList()
         {
-            Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid})");
+            Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid}");
         }
 
         public void PayEmployees()
