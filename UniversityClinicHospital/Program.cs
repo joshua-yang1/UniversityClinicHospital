@@ -37,6 +37,12 @@ namespace UniversityClinicHospital
                         employee.PrintEmployeeList();
                         break;
                     }
+
+                case "2":
+                    {
+                        employee.PayEmployees();
+                        break;
+                    }
             }
         }
     }

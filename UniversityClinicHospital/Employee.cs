@@ -41,12 +41,12 @@ namespace UniversityClinicHospital
             {
                 if (HasBeenPaid == true)
                 {
-                    Console.WriteLine($"{Name} has already been paid.");
+                    Console.WriteLine($"{employee.Name} has already been paid.");
                 }
                 else
                 {
-                    HasBeenPaid = true;
-                    Console.WriteLine($"{Name} has been paid.");
+                    employee.HasBeenPaid = true;
+                    Console.WriteLine($"{employee.Name} has been paid.");
                 }
             }
         }
