@@ -21,5 +21,12 @@ namespace UniversityClinicHospital
             Specialty = specialty;
             Salary = 90000;
         }
+        public override void PrintEmployeeList()
+        {
+            foreach (Doctor doctor in listOfEmployees)
+            {
+                Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid} | Specialty: {Specialty}");
+            }
+        }
     }
 }

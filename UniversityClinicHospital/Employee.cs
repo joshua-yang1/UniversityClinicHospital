@@ -6,6 +6,8 @@ namespace UniversityClinicHospital
 {
     public class Employee
     {
+        public List<Employee> listOfEmployees = new List<Employee>();
+
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
         public int Salary { get; set; }
@@ -19,7 +21,6 @@ namespace UniversityClinicHospital
         {
             Name = name;
             EmployeeNumber = employeeNumber;
-            HasBeenPaid = false;
         }
         public void FillEmployeeList()
         {
