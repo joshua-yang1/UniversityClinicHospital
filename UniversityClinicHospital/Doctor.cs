@@ -22,5 +22,10 @@ namespace UniversityClinicHospital
         {
             Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid} | Specialty: {Specialty}");
         }
+
+        public virtual void DrawBlood()
+        {
+
+        }
     }
 }

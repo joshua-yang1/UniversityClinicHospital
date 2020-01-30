@@ -16,5 +16,17 @@ namespace UniversityClinicHospital.Tests
 
             Assert.True(newEmployee.HasBeenPaid);
         }
+
+        // DrawBlood increases BloodLevel by 5
+        [Fact]
+        public void DrawBlood_Increases_BloodLevel_By_5()
+        {
+            Doctor newDoctor = new Doctor();
+            Patient newPatient = new Patient();
+
+            newDoctor.DrawBlood();
+
+            Assert.Equal(25, newPatient.BloodLevel);
+        }
     }
 }
