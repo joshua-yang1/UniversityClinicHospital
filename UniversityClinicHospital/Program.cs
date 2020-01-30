@@ -10,12 +10,17 @@ namespace UniversityClinicHospital
         {
             Employee employee = new Employee();
             Doctor doctor = new Doctor();
-            //employee.FillEmployeeList();
+            Nurse nurse = new Nurse();
+            Receptionist receptionist = new Receptionist();
+            Janitor janitor = new Janitor();
             employee.listOfEmployees.Add(new Doctor("George", 1234, "foot"));
             employee.listOfEmployees.Add(new Doctor("Paul", 12345, "heart"));
-            /*employee.listOfEmployees[1] = new Employee("Paul", 12345, 40000, true);
-            employee.listOfEmployees[2] = new Employee("Louis", 123456, 50000, false);
-            employee.listOfEmployees[3] = new Employee("Bob", 1234567, 45000, false);*/
+            employee.listOfEmployees.Add(new Nurse("Anne", 123456, 2));
+            employee.listOfEmployees.Add(new Nurse("Robert", 1234567, 1));
+            employee.listOfEmployees.Add(new Receptionist("Nathan", 123456, true));
+            employee.listOfEmployees.Add(new Receptionist("Veronica", 1234567, false));
+            employee.listOfEmployees.Add(new Janitor("John", 123456, false));
+            employee.listOfEmployees.Add(new Janitor("Ralph", 1234567, true));
 
             Console.WriteLine("University Clinic Hospital");
             Console.WriteLine("\nMain Menu:");

@@ -15,18 +15,12 @@ namespace UniversityClinicHospital
         
         public Doctor(string name, int employeeNumber, string specialty) : base(name, employeeNumber)
         {
-            /*this.Name = name;
-            this.EmployeeNumber = employeeNumber;
-            this.Specialty = specialty;*/
             Specialty = specialty;
             Salary = 90000;
         }
-        public override void PrintEmployeeList()
+        public override void PrintEmployeeInfo()
         {
-            foreach (Doctor doctor in listOfEmployees)
-            {
-                Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid} | Specialty: {Specialty}");
-            }
+            Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid} | Specialty: {Specialty}");
         }
     }
 }

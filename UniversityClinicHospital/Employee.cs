@@ -22,15 +22,16 @@ namespace UniversityClinicHospital
             Name = name;
             EmployeeNumber = employeeNumber;
         }
-        public void FillEmployeeList()
+        public virtual void PrintEmployeeInfo()
         {
             
         }
-        public void PrintEmployeeList()
+        public virtual void PrintEmployeeList()
         {
             foreach(Employee employee in listOfEmployees)
             {
-                Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid}");
+                employee.PrintEmployeeInfo();
+                //Console.WriteLine($"Name: {employee.Name} | Number: {employee.EmployeeNumber} | Salary: {employee.Salary} | Has Been Paid? {employee.HasBeenPaid}");
             }
         }
 
