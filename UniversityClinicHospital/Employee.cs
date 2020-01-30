@@ -6,21 +6,27 @@ namespace UniversityClinicHospital
 {
     public class Employee
     {
-        //CAN ADD TO PROGRAM
         public List<Employee> listOfEmployees = new List<Employee>();
-        
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
         public int Salary { get; set; }
         public bool HasBeenPaid { get; set; }
         //add base constructor
+        public Employee()
+        {
+
+        }
         public Employee(string name, int employeeNumber)
         {
             Name = name;
             EmployeeNumber = employeeNumber;
             HasBeenPaid = false;
         }
-
+        public void FillEmployeeList()
+        {
+            listOfEmployees.Add(new Employee("George", 1234));
+            listOfEmployees.Add(new Employee("Paul", 12345));
+        }
         public void PrintEmployeeList()
         {
             foreach(Employee employee in listOfEmployees)

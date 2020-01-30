@@ -6,5 +6,6 @@ namespace UniversityClinicHospital
 {
     public class Nurse : Employee
     {
+
     }
 }
