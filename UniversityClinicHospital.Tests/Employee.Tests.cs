@@ -11,22 +11,23 @@ namespace UniversityClinicHospital.Tests
         public void Employees_Can_Be_Paid()
         {
             Employee newEmployee = new Employee();
+            newEmployee.listOfEmployees.Add(newEmployee);
 
             newEmployee.PayEmployees();
 
             Assert.True(newEmployee.HasBeenPaid);
         }
 
-        // DrawBlood increases BloodLevel by 5
+        // DrawBlood decreases BloodLevel by 5
         [Fact]
-        public void DrawBlood_Increases_BloodLevel_By_5()
+        public void DrawBlood_Decreases_BloodLevel_By_5()
         {
             Doctor newDoctor = new Doctor();
             Patient newPatient = new Patient();
 
             newDoctor.DrawBlood(newPatient);
 
-            Assert.Equal(25, newPatient.BloodLevel);
+            Assert.Equal(15, newPatient.BloodLevel);
         }
 
         // CareForPatient increases HealthStatus by 5

@@ -14,6 +14,7 @@ namespace UniversityClinicHospital
             Receptionist receptionist = new Receptionist();
             Janitor janitor = new Janitor();
             Patient patient = new Patient();
+
             employee.listOfEmployees.Add(new Doctor("George", 11, "foot"));
             employee.listOfEmployees.Add(new Doctor("Paul", 22, "heart"));
             employee.listOfEmployees.Add(new Nurse("Anne", 33, 2));
@@ -30,10 +31,11 @@ namespace UniversityClinicHospital
                 Console.WriteLine("University Clinic Hospital");
                 Console.WriteLine("\nMain Menu:");
                 Console.WriteLine("1. View List of Employees");
-                Console.WriteLine("2. Pay Employees");
-                Console.WriteLine("3. Draw Blood");
-                Console.WriteLine("4. Care For Patient");
-                Console.WriteLine("5. Exit Interface");
+                Console.WriteLine("2. Select Medical Employee");
+                Console.WriteLine("3. Pay Employees");
+                Console.WriteLine("4. Draw Blood");
+                Console.WriteLine("5. Care For Patient");
+                Console.WriteLine("6. Exit Interface");
                 string userChoice = Console.ReadLine();
 
                 switch (userChoice)
@@ -46,23 +48,30 @@ namespace UniversityClinicHospital
 
                     case "2":
                         {
-                            employee.PayEmployees();
+                            employee.PrintMedicalEmployeeList();
+                            employee.SelectMedicalEmployee();
                             break;
                         }
 
                     case "3":
                         {
-                            employee.DrawBlood(patient);
+                            employee.PayEmployees();
                             break;
                         }
 
                     case "4":
                         {
-                            employee.CareForPatient(patient);
+                            employee.DrawBlood(patient);
                             break;
                         }
 
                     case "5":
+                        {
+                            employee.CareForPatient(patient);
+                            break;
+                        }
+
+                    case "6":
                         {
                             activeSession = false;
                             break;

@@ -27,11 +27,37 @@ namespace UniversityClinicHospital
         {
             
         }
-        public virtual void PrintEmployeeList()
+        public void PrintEmployeeList()
         {
             foreach(Employee employee in listOfEmployees)
             {
                 employee.PrintEmployeeInfo();
+            }
+        }
+
+        public void PrintMedicalEmployeeList()
+        {
+            foreach (Employee employee in listOfEmployees)
+            {
+                if (employee.IsMedicalEmployee == true)
+                {
+                    employee.PrintEmployeeInfo();
+                }
+            }
+        }
+
+        public Employee SelectMedicalEmployee()
+        {           
+            Console.WriteLine("Select Medical Employee by typing their number:");
+            int selectEmployee = Convert.ToInt32(Console.ReadLine());
+            int employeeNumber = (selectEmployee - 1);
+            if (selectEmployee == EmployeeNumber)
+            {
+                return listOfEmployees[employeeNumber];
+            }
+            else
+            {
+                return null;
             }
         }
 
