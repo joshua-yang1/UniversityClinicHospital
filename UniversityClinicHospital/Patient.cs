@@ -14,5 +14,9 @@ namespace UniversityClinicHospital
             HealthStatus = 10;
             BloodLevel = 20;
         }
+        public void ShowPatientStatus()
+        {
+            Console.WriteLine($"Patient blood level: {BloodLevel} | Patient health status: {HealthStatus}");
+        }
     }
 }
