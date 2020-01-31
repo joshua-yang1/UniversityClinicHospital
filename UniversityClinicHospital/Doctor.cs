@@ -17,15 +17,24 @@ namespace UniversityClinicHospital
         {
             Specialty = specialty;
             Salary = 90000;
+            IsMedicalEmployee = true;
         }
         public override void PrintEmployeeInfo()
         {
             Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid} | Specialty: {Specialty}");
         }
 
-        public virtual void DrawBlood()
+        public override void DrawBlood(Patient patient)
         {
+            patient.BloodLevel -= 5;
+            Console.WriteLine("Patient blood level has decreased by 5.");
+        }
 
+        public override void CareForPatient(Patient patient)
+        {
+            patient.HealthStatus += 5;
+            Console.WriteLine("Patient health level has increased by 5.");
         }
     }
 }
+

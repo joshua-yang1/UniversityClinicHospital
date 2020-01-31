@@ -12,6 +12,7 @@ namespace UniversityClinicHospital
         public int EmployeeNumber { get; set; }
         public int Salary { get; set; }
         public bool HasBeenPaid { get; set; }
+        public bool IsMedicalEmployee { get; set; }
         //add base constructor
         public Employee()
         {
@@ -31,7 +32,6 @@ namespace UniversityClinicHospital
             foreach(Employee employee in listOfEmployees)
             {
                 employee.PrintEmployeeInfo();
-                //Console.WriteLine($"Name: {employee.Name} | Number: {employee.EmployeeNumber} | Salary: {employee.Salary} | Has Been Paid? {employee.HasBeenPaid}");
             }
         }
 
@@ -49,6 +49,16 @@ namespace UniversityClinicHospital
                     Console.WriteLine($"{employee.Name} has been paid.");
                 }
             }
+        }
+
+        public virtual void DrawBlood(Patient patient)
+        {
+
+        }
+
+        public virtual void CareForPatient(Patient patient)
+        {
+
         }
     }
 }

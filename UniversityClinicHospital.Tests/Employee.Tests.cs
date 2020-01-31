@@ -24,9 +24,21 @@ namespace UniversityClinicHospital.Tests
             Doctor newDoctor = new Doctor();
             Patient newPatient = new Patient();
 
-            newDoctor.DrawBlood();
+            newDoctor.DrawBlood(newPatient);
 
             Assert.Equal(25, newPatient.BloodLevel);
+        }
+
+        // CareForPatient increases HealthStatus by 5
+        [Fact]
+        public void CareForPatient_Increases_HealthStatus_By_5()
+        {
+            Doctor newDoctor = new Doctor();
+            Patient newPatient = new Patient();
+
+            newDoctor.CareForPatient(newPatient);
+
+            Assert.Equal(15, newPatient.HealthStatus);
         }
     }
 }

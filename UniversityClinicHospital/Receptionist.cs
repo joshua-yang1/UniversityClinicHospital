@@ -17,6 +17,7 @@ namespace UniversityClinicHospital
         {
             IsOnThePhone = isonthePhone;
             Salary = 45000;
+            IsMedicalEmployee = false;
         }
 
         public override void PrintEmployeeInfo()

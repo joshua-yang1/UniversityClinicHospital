@@ -11,11 +11,6 @@ namespace UniversityClinicHospital
 
         public Patient()
         {
-
-        }
-
-        public Patient(int healthStatus, int bloodLevel)
-        {
             HealthStatus = 10;
             BloodLevel = 20;
         }

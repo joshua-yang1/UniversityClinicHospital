@@ -17,11 +17,24 @@ namespace UniversityClinicHospital
         {
             NumberofPatients = numberofPatients;
             Salary = 50000;
+            IsMedicalEmployee = true;
         }
 
         public override void PrintEmployeeInfo()
         {
             Console.WriteLine($"Name: {Name} | Number: {EmployeeNumber} | Salary: {Salary} | Has Been Paid? {HasBeenPaid} | Number of Patients: {NumberofPatients}");
+        }
+
+        public override void DrawBlood(Patient patient)
+        {
+            patient.BloodLevel -= 3;
+            Console.WriteLine("Patient blood level has decreased by 3.");
+        }
+
+        public override void CareForPatient(Patient patient)
+        {
+            patient.HealthStatus += 3;
+            Console.WriteLine("Patient health status has increased by 3.");
         }
     }
 }

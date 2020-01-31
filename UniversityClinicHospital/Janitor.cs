@@ -17,6 +17,7 @@ namespace UniversityClinicHospital
         {
             IsSweeping = isSweeping;
             Salary = 40000;
+            IsMedicalEmployee = false;
         }
 
         public override void PrintEmployeeInfo()
