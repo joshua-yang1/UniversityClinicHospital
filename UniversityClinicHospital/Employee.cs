@@ -7,6 +7,7 @@ namespace UniversityClinicHospital
     public class Employee
     {
         public List<Employee> listOfEmployees = new List<Employee>();
+        public List<Employee> listOfMedicalEmployees = new List<Employee>();
 
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
@@ -37,12 +38,11 @@ namespace UniversityClinicHospital
 
         public void PrintMedicalEmployeeList()
         {
-            foreach (Employee employee in listOfEmployees)
+            int count = 1;
+            foreach (Employee employee in listOfMedicalEmployees)
             {
-                if (employee.IsMedicalEmployee == true)
-                {
-                    employee.PrintEmployeeInfo();
-                }
+                Console.WriteLine($"{count}. Name: {employee.Name} | Number: {employee.EmployeeNumber}");
+                count++;
             }
         }
 
@@ -50,15 +50,8 @@ namespace UniversityClinicHospital
         {           
             Console.WriteLine("Select Medical Employee by typing their number:");
             int selectEmployee = Convert.ToInt32(Console.ReadLine());
-            int employeeNumber = (selectEmployee - 1);
-            if (selectEmployee == EmployeeNumber)
-            {
-                return listOfEmployees[employeeNumber];
-            }
-            else
-            {
-                return null;
-            }
+            int employeeIndex = (selectEmployee - 1);
+            return listOfMedicalEmployees[employeeIndex];
         }
 
         public void PayEmployees()

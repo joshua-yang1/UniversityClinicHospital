@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UniversityClinicHospital
 {
@@ -8,12 +6,14 @@ namespace UniversityClinicHospital
     {
         public static void Main(string[] args)
         {
+            bool activeSession = true;
             Employee employee = new Employee();
             Doctor doctor = new Doctor();
             Nurse nurse = new Nurse();
             Receptionist receptionist = new Receptionist();
             Janitor janitor = new Janitor();
             Patient patient = new Patient();
+            
 
             employee.listOfEmployees.Add(new Doctor("George", 11, "foot"));
             employee.listOfEmployees.Add(new Doctor("Paul", 22, "heart"));
@@ -24,8 +24,13 @@ namespace UniversityClinicHospital
             employee.listOfEmployees.Add(new Janitor("John", 77, false));
             employee.listOfEmployees.Add(new Janitor("Ralph", 88, true));
 
-            bool activeSession = true;
-
+            foreach(Employee emp in employee.listOfEmployees)
+            {
+                if (emp.IsMedicalEmployee == true)
+                {
+                    employee.listOfMedicalEmployees.Add(emp);
+                }
+            }
             do
             {
                 Console.WriteLine("University Clinic Hospital");
