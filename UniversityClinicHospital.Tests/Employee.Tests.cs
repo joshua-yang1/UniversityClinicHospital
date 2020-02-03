@@ -5,6 +5,49 @@ namespace UniversityClinicHospital.Tests
 {
     public class EmployeeTests
     {
+        // Employee name can be assigned
+        [Fact]
+        public void Employee_Name_Can_Be_Assigned()
+        {
+            Employee newEmployee = new Employee();
+
+            newEmployee.Name = "George";
+
+            Assert.Equal("George", newEmployee.Name);
+        }
+
+        // Employee salary can be assigned
+        [Fact]
+        public void Employee_Salary_Can_Be_Assigned()
+        {
+            Employee newEmployee = new Employee();
+
+            newEmployee.Salary = 90000;
+
+            Assert.Equal(90000, newEmployee.Salary);
+        }
+
+        // Employee number can be assigned
+        [Fact]
+        public void Employee_Number_Can_Be_Assigned()
+        {
+            Employee newEmployee = new Employee();
+
+            newEmployee.EmployeeNumber = 01;
+
+            Assert.Equal(01, newEmployee.EmployeeNumber);
+        }
+
+        // HasBeenPaid is false by default
+        [Fact]
+        public void HasBeenPaid_Is_False_By_Default()
+        {
+            Employee newEmployee = new Employee();
+
+            newEmployee.HasBeenPaid = false;
+
+            Assert.False(newEmployee.HasBeenPaid);
+        }
 
         // Employees can be paid
         [Fact]
