@@ -24,10 +24,35 @@ namespace UniversityClinicHospital
             Name = name;
             EmployeeNumber = employeeNumber;
         }
+
+        public void MenuLoop()
+        {
+            Console.WriteLine("University Clinic Hospital");
+            Console.WriteLine("\nMain Menu:");
+            Console.WriteLine("1. View List of Employees");
+            Console.WriteLine("2. Select Medical Employee");
+            Console.WriteLine("3. Pay Employees");
+            Console.WriteLine("4. Check Patient Status");
+            Console.WriteLine("5. Draw Blood");
+            Console.WriteLine("6. Care For Patient");
+            Console.WriteLine("7. Exit Interface");
+        }
         
         public virtual void PrintEmployeeInfo()
         {
             
+        }
+
+        public void AddEmployeesToList()
+        {
+            listOfEmployees.Add(new Doctor("Doctor Jones", 11, "foot"));
+            listOfEmployees.Add(new Doctor("Doctor Paul", 22, "heart"));
+            listOfEmployees.Add(new Nurse("Nurse Joy", 33, 2));
+            listOfEmployees.Add(new Nurse("Nurse Robert", 44, 1));
+            listOfEmployees.Add(new Receptionist("Receptionist Nathan", 55, true));
+            listOfEmployees.Add(new Receptionist("Receptionist Veronica", 66, false));
+            listOfEmployees.Add(new Janitor("Janitor John", 77, false));
+            listOfEmployees.Add(new Janitor("Janitor Ralph", 88, true));
         }
         public void PrintEmployeeList()
         {
